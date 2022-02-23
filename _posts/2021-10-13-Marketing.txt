@@ -1,7 +1,0 @@
----
-toc: true
-layout: post
-description: Uso del aprendizaje no supervisado para segmentar clientes con fines de marketing.
-categories: [markdown]
-title: Clustering para segmentación de clientes
----
