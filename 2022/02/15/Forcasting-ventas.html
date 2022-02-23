@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Title | Pablo Jaramillo - Portfolio</title>
+<title>Forecasting de precios usando FB Prophet | Pablo Jaramillo - Portfolio</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Forecasting de precios usando FB Prophet" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Data science projects." />
 <meta property="og:description" content="Data science projects." />
@@ -16,9 +16,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-02-15T00:00:00-06:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Title" />
+<meta property="twitter:title" content="Forecasting de precios usando FB Prophet" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-02-15T00:00:00-06:00","datePublished":"2022-02-15T00:00:00-06:00","description":"Data science projects.","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://pabloja4.github.io/portfolio/2022/02/15/Forcasting-ventas.html"},"url":"https://pabloja4.github.io/portfolio/2022/02/15/Forcasting-ventas.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-02-15T00:00:00-06:00","datePublished":"2022-02-15T00:00:00-06:00","description":"Data science projects.","headline":"Forecasting de precios usando FB Prophet","mainEntityOfPage":{"@type":"WebPage","@id":"https://pabloja4.github.io/portfolio/2022/02/15/Forcasting-ventas.html"},"url":"https://pabloja4.github.io/portfolio/2022/02/15/Forcasting-ventas.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://pabloja4.github.io/portfolio/feed.xml" title="Pablo Jaramillo - Portfolio" /><link rel="shortcut icon" type="image/x-icon" href="/portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-02-15T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Forecasting de precios usando FB Prophet</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-02-15T00:00:00-06:00" itemprop="datePublished">
         Feb 15, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -125,6 +125,13 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Un análisis sencillo de ventas y un forecasting de crecimiento, según la época del año y diferentes tiendas</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -147,6 +154,12 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Se-cargan-dos-data-sets">Se cargan dos data-sets<a class="anchor-link" href="#Se-cargan-dos-data-sets"> </a></h2>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -903,6 +916,13 @@ dtype: int64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Algunos nulos de los que hay que encargarse</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1343,6 +1363,12 @@ dtype: int64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Completamos-los-valores-nan">Completamos los valores nan<a class="anchor-link" href="#Completamos-los-valores-nan"> </a></h3>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1726,6 +1752,12 @@ dtype: int64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Preparamos-las-fechas-para-el-an&#225;lisis">Preparamos las fechas para el an&#225;lisis<a class="anchor-link" href="#Preparamos-las-fechas-para-el-an&#225;lisis"> </a></h3>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1925,6 +1957,17 @@ dtype: int64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Las ventas y los clientes están correctamente correlacionados</li>
+<li>Los domingos se disparan las ventas</li>
+<li>Hay estacionalidad en las ventas</li>
+</ul>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2150,6 +2193,22 @@ dtype: int64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>La tienda B es la que más factura.</li>
+<li>La tienda A tiene el peor desempeño.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Desplegamos-un-modelo-de-Prophet">Desplegamos un modelo de Prophet<a class="anchor-link" href="#Desplegamos-un-modelo-de-Prophet"> </a></h3>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
